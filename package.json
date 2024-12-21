@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npx prisma db push --schema=src/prisma/schema.prisma && npx prisma generate --schema=src/prisma/schema.prisma && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.9.1",
     "@prisma/client": "^6.1.0",
     "@radix-ui/react-avatar": "^1.1.2",
     "@radix-ui/react-checkbox": "^1.1.3",
