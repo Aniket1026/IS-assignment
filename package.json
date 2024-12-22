@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "npx prisma db push --schema=src/prisma/schema.prisma && npx prisma generate --schema=src/prisma/schema.prisma && next build",
     "start": "next start",
     "lint": "next lint"
   },

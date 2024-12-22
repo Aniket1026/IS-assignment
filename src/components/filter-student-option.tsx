@@ -3,11 +3,12 @@ import { ChevronDown } from "lucide-react"
 import { Button } from "./ui/button"
 
 interface FilterStudentOptionsProps {
-    defaultValue: string;
-    options: string[];
+  defaultValue: string;
+  options: string[];
+  onSelectOption: (option: string) => void;
 }
 
-const FilterStudentOptions = ({ defaultValue, options }: FilterStudentOptionsProps) => {
+const FilterStudentOptions = ({ defaultValue, options,onSelectOption }: FilterStudentOptionsProps) => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -17,8 +18,8 @@ const FilterStudentOptions = ({ defaultValue, options }: FilterStudentOptionsPro
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-                {options.map((option, index) => (
-                    <DropdownMenuItem key={index}>{option}</DropdownMenuItem>
+                {options.map((option) => (
+                    <DropdownMenuItem key={option} onSelect={()=>onSelectOption(option)}>{option}</DropdownMenuItem>
                 ))}
             </DropdownMenuContent>
         </DropdownMenu>

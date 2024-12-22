@@ -11,9 +11,9 @@ export default function Page() {
       <div className="flex-1">
         <header className="flex h-16 items-center gap-4 border-b px-6">
           <div className="flex-1">
-            <div className="relative">
+            <div className="relative ml-6">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input placeholder="Search your course" className="pl-8 w-[400px]" />
+              <Input placeholder="Search your course" className="pl-8 left-5 md:w-[400px] w-[300px]" />
             </div>
           </div>
           <UserNav />
